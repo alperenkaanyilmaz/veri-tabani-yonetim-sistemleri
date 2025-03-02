@@ -1,0 +1,101 @@
+1.SORU --> Geleneksel dosyalama sistemlerinin çalışma şeklini açıklayarak bildiğiniz bir programlama dili yardımıyla txt dosyadan veri okumak ve veri yazmak için bir uygulama geliştiriniz. 
+Geleneksel dosyalama sistemlerinde , depolanacak veri grupları bağımsız olarak oluşturulmak zorundadır. Bu tür dosyalarda veri , sıralı veya doğrudan erişim yöntemi ile kullanılır.
+Belgeler  belirli bir düzene göre (örneğin, alfabetik, kronolojik, konu bazlı) düzenlenir. 
+
+_______________________________________________________________________________________________________________
+|    HASTA ID      |HASTA ADI     |TC KİMLİK NO    |BÖLÜM            |SON MUAYENE TARİHİ    |DOKTOR ADI       |
+|____ _____________|______________|________________|_________________|______________________|_________________|    
+|      1001        |Kaan Yılmaz   |15549128107     |KARDİYOLOJİ      |15.02.2024            |DR. AHMET YILMAZ |
+|__________________|______________|________________|_________________|______________________|_________________|
+|      1002        |Sinan Tok     |23456669012     |ORTOPEDİ    	   |20.09.2021            |DR. Esma Soykan |
+|______ ___________|______________|________________|_________________|______________________|_________________|
+|      1003        |Sıla Çakıl    |345678901454    |GÖZ HASTALIKLARI |18.02.2025            |DR. Binnur Nigiz |
+|_____ ____________|______________|________________|_________________|______________________|_________________|
+|      1004        |Sami  ÇELİK   |45678901211     |DAHİLİYE         |22.02.2025            |DR Dilek Demir   |
+|_____ ____________|______________|________________|_________________|______________________|_________________|
+|      1005        |Ela Demir     |78229012345     |NÖROLOJİ         |25.02.2025            |DR CAN Korkmaz   |
+|______ ___________|______________|________________|_________________|______________________|_________________|
+
+
+2.SORU --> Geleneksel dosyalama sistemleriyle veri tabanı yönetim sistemlerinin benzerlik ve farklılıklarını açıklayınız.
+
+BENZERLİK  :
+
+ *Veri saklama amacı taşırlar.                                       
+ *Verilere erişim, güncelleme ve silme işlemleri yapılabilir.        
+ *Güvenlik önlemleri bulunur. 
+
+FARKLILIK  :
+
+  *Dosyalama sistemlerinde veri tekrarları sık görülür, VTYS veri tekrarını önler.
+  *VTYS çok kullanıcılı erişimi ve eşzamanlı işlemleri destekler, dosyalama sistemleri bu konuda sınırlıdır.
+  *Dosyalama sistemleri bağımsız dosyalar kullanırken, VTYS verileri tablolar ve ilişkilerle saklar.
+
+3.SORU --> VTYS'nin geleneksel sisteme göre üstün özelliklerini açıklayınız.
+
+  *Verilerin kalıcılığını sağlar. İstediğiniz bilgileri , istediğiniz türde , istediğiniz sürece saklanmasını sağlamaktadır.
+
+4.SORU --> Veritabanının görevini açıklayarak kullanıldığı alanlara örnek veriniz.
+
+  *Veri tabanları veri saklama , yönetme güvenlik sağlama için kullanılır.
+
+                        kullanım alanları 
+                           -Bankacılık 
+                           -Sağlık 
+                           -E-Ticaret 
+
+5.SORU --> Tablo , satır ve sütun kavramlarını açıklayınız.
+
+TABLO: Veritabanı içerisinde tutulacak verileri taşımak için kullanılır . Tablo satır ve sütunlardan oluşan verilerin depolandığı veritabanı elemanıdır.
+SÜTUN: Tablo içerisinde tutulan her bir veri türüne verilen isimdir .
+SATIR: Tablo içerisinde sütuna ait veri grubudur.
+
+6.SORU --> Birincil anahtar ve yabancıl anahtar kavramlarını ve farklarını açıklayınız.
+
+Primary Key ( Birincil Anahtar )
+-> aynı değeri iki kez içermeyecek olan sütun birincil anahtar olarak belirlenir.
+
+Foreign Key (Yabancıl Anahtar )
+-> Bir tablodaki sütunun başka bir tablodaki birincil anahtara referans vermesidir. İki tablo arasında ilişki kurar.
+
+7.SORU --> Veritabanı kullanıcı türleri nelerdir?
+
+          *Veritabanı yöneticisi
+          *Uygulama programcısı 
+          *Sorgu dili kullanıcıları 
+          *Son kullanıcılar 
+
+8.SORU --> Veritabanı ile VTYS'nin farkını açıklayınız.
+
+  Veritabanı verilerin saklandığı yerdir. Veritabanı yönetim sistemi verileri yönetmek için kullanılan yazılımdır.
+
+9.SORU --> İlişkisel veri modelini açıklayınız
+
+  İlişkisel veri modeli , verileri tablolar halinde organize eden sistemdir 
+   İlişkiler Bire-Bir (3-3) , Bire-Çok ( 3-a) , Çoğa-Bir (a-3) , ve Çoğa-Çok (a-b) 
+
+10.SORU --> Bir öğrenci bilgi sistemi için kullanılacak veritabanı,tablolar ve tablolar arasındaki ilişkileri belirleyiniz.
+
+ TABLOLAR 
+      Öğrenciler  ( Ad , soyad , kayıt tarihi , telefon , email )
+      Öğretmenler ( Ad , soyad , telefon , email )
+      Dersler     ( Ders adı , ders kodu , kredi )
+      Kayıtlar    ( Ad Soyad, kayıt tarihi , ders )
+      Notlar      ( Not , Ad Soyad , ders )
+      Bölümler    ( Bölüm adı )
+
+
+ TABLOLAR ARASI İLİŞKİLER 
+      Öğrenciler <=> Kayıtlar arası  1-N ilişksi 
+       ( Bir öğrenci birden fazla derse kayıt olabilir.)
+      Dersler <=> Kayıtlar arası 2-a ilişkisi 
+       ( Bir derse birden fazla öğrenci kayıt olabilir.)
+      Dersler  <=> Öğretmenler arası 1-N ilişkisi 
+       ( Bir öğretmen birden fazla derse girebilir.)
+      Öğrenci <=> Notlar arası 1-N ilişkisi 
+       ( Bir öğrencinin birden fazla notu olabilir.)
+      Dersler <=> Notlar arası 1-N ilişkisi 
+       ( Bir dersin birden fazla notu olabilir.)
+      Öğretmenler <=> Bölümler arası N-1 ilişkisi 
+       ( Bir bölümde birden fazla öğretmen olabilir.)
+   
